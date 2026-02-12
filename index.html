@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUPELI: Eventos y Detalles</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Librería para importar Excel -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <!-- Navegación Superior -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            🎁 JUPELI
+        </div>
+        <div class="nav-menu">
+            <div class="nav-item active" data-view="view-dashboard">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-label">Inicio</div>
+            </div>
+            <div class="nav-item" data-view="view-clientes">
+                <div class="nav-icon">👥</div>
+                <div class="nav-label">Clientes</div>
+            </div>
+            <div class="nav-item" data-view="view-productos">
+                <div class="nav-icon">🎁</div>
+                <div class="nav-label">Productos</div>
+            </div>
+            <div class="nav-item" data-view="view-pedidos">
+                <div class="nav-icon">📦</div>
+                <div class="nav-label">Pedidos</div>
+            </div>
+            <div class="nav-item" data-view="view-costeo">
+                <div class="nav-icon">💵</div>
+                <div class="nav-label">Costeo</div>
+            </div>
+            <div class="nav-item" data-view="view-inventario">
+                <div class="nav-icon">📊</div>
+                <div class="nav-label">Inventario</div>
+            </div>
+            <div class="nav-item" data-view="view-finanzas">
+                <div class="nav-icon">💰</div>
+                <div class="nav-label">Finanzas</div>
+            </div>
+            <div class="nav-item" data-view="view-reportes">
+                <div class="nav-icon">📈</div>
+                <div class="nav-label">Reportes</div>
+            </div>
+            <div class="nav-item" data-view="view-mas">
+                <div class="nav-icon">⚙️</div>
+                <div class="nav-label">Config</div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Dashboard -->
+        <div id="view-dashboard" class="view active"></div>
+
+        <!-- Clientes -->
+        <div id="view-clientes" class="view"></div>
+
+        <!-- Productos -->
+        <div id="view-productos" class="view"></div>
+
+        <!-- Pedidos -->
+        <div id="view-pedidos" class="view"></div>
+
+        <!-- Costeo -->
+        <div id="view-costeo" class="view"></div>
+
+        <!-- Inventario -->
+        <div id="view-inventario" class="view"></div>
+
+        <!-- Finanzas -->
+        <div id="view-finanzas" class="view"></div>
+
+        <!-- Reportes -->
+        <div id="view-reportes" class="view"></div>
+
+        <!-- Más -->
+        <div id="view-mas" class="view"></div>
+    </main>
+
+    <!-- Modal Global -->
+    <div id="modal" class="modal"></div>
+
+    <!-- Scripts Base - Orden importante -->
+    <script src="js/firebase-config.js"></script>
+    <script src="data/database.js"></script>
+    <script src="data/crud-helper.js"></script>
+    <script src="data/utils.js"></script>
+    
+    <!-- Módulos de vistas -->
+    <script src="js/modules/dashboard.js"></script>
+    <script src="js/modules/clientes.js"></script>
+    <script src="js/modules/productos.js"></script>
+    <script src="js/modules/pedidos.js"></script>
+    <script src="js/modules/costeo.js"></script>
+    <script src="js/modules/inventario.js"></script>
+    <script src="js/modules/finanzas.js"></script>
+    <script src="js/modules/reportes.js"></script>
+    <script src="js/modules/mas.js"></script>
+    
+    <!-- Script principal de inicialización -->
+    <script src="js/app.js"></script>
+</body>
+</html>
